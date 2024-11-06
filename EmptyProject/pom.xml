@@ -8,10 +8,45 @@
     <artifactId>EmptyProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <id>ivan</id>
+            <name>Ivan Potemkin</name>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <email>ivan@example.com</email>
+            <url>https://www.example.com/ivan</url>
+            <organization>Effective Mobile</organization>
+            <organizationUrl>https://www.example.com</organizationUrl>
+            <timezone>Europe/Moscow</timezone>
+            <properties>
+                <picUrl>https://www.example.com/ivan/pic</picUrl>
+            </properties>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.plugin</groupId>
+                <artifactId>MavenPlugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>infoDevs</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
